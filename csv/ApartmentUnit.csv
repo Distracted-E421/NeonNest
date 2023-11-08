@@ -1,0 +1,4 @@
+UnitID,UnitName,UnitType,SquareFootage,TechAmenities,MonthlyRent,AvailabilityStatus
+2001,Neon Haven,Studio,550,"AI Concierge, Smart Walls, Hologram Projector",2500,true
+2002,Retro Refuge,One-Bedroom,750,"Virtual Sky Ceiling, Automated Climate Control",3200,false
+2003,Cyber Loft,Loft,850,"Robotic Furniture, Biometric Locks",3500,true

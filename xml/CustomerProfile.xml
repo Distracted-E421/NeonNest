@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <Customers>
+        <Customer>
+          <CustomerID>1001</CustomerID>
+          <FullName>Max Stratus</FullName>
+          <Email>max@neonmail.com</Email>
+          <PhoneNumber>555-NEON-01</PhoneNumber>
+          <RegistrationDate>2077-10-01</RegistrationDate>
+          <Address>Sector-9, GridPoint 47</Address>
+          <PreferredFeatures>AI Assistant, Holographic Displays</PreferredFeatures>
+        </Customer>
+        <Customer>
+          <CustomerID>1002</CustomerID>
+          <FullName>Nova Sterling</FullName>
+          <Email>nova@retrobox.com</Email>
+          <PhoneNumber>555-NEON-02</PhoneNumber>
+          <RegistrationDate>2077-10-05</RegistrationDate>
+          <Address>Sector-3, GridPoint 19</Address>
+          <PreferredFeatures>Virtual Reality Room, Automated Drones</PreferredFeatures>
+        </Customer>
+        <Customer>
+          <CustomerID>1003</CustomerID>
+          <FullName>Zane Vector</FullName>
+          <Email>zane@cyberdash.com</Email>
+          <PhoneNumber>555-NEON-03</PhoneNumber>
+          <RegistrationDate>2077-10-10</RegistrationDate>
+          <Address>Sector-7, GridPoint 88</Address>
+          <PreferredFeatures>Biometric Security, Smart Glass Walls</PreferredFeatures>
+        </Customer>
+      </Customers>
+</root>

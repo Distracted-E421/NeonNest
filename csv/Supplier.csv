@@ -1,0 +1,7 @@
+SupplierID,SupplierName,MaterialProvided,ContactInfo,Location,ReliabilityRating
+S1001,EVGA,Heat Sinks,contact@evga.com,California,9
+S1002,Cooler Master,Heat Sinks,info@coolermaster.com,Taiwan,8
+S1003,AMD,GPUs,support@amd.com,California,9
+S1004,Nvidia,GPUs,help@nvidia.com,California,10
+S1005,G.Skill,RGB RAM Sticks,service@gskill.com,Taiwan,7
+S1006,Corsair,RGB RAM Sticks,support@corsair.com,California,8

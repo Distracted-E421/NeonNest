@@ -1,0 +1,4 @@
+CustomerID,FullName,Email,PhoneNumber,RegistrationDate,Address,PreferredFeatures
+1001,Max Stratus,max@neonmail.com,555-NEON-01,2077-10-01,Sector-9, GridPoint 47,"AI Assistant, Holographic Displays"
+1002,Nova Sterling,nova@retrobox.com,555-NEON-02,2077-10-05,Sector-3, GridPoint 19,"Virtual Reality Room, Automated Drones"
+1003,Zane Vector,zane@cyberdash.com,555-NEON-03,2077-10-10,Sector-7, GridPoint 88,"Biometric Security, Smart Glass Walls"

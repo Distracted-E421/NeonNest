@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <SupplyItems>
+        <SupplyItem>
+          <ItemID>I1001</ItemID>
+          <ItemName>Heat Sink</ItemName>
+          <SupplierID>S1001</SupplierID>
+          <QuantityAvailable>500</QuantityAvailable>
+          <UnitCost>25.00</UnitCost>
+          <UsageDescription>Used in climate control systems</UsageDescription>
+        </SupplyItem>
+        <SupplyItem>
+          <ItemID>I1002</ItemID>
+          <ItemName>GPU</ItemName>
+          <SupplierID>S1003</SupplierID>
+          <QuantityAvailable>300</QuantityAvailable>
+          <UnitCost>400.00</UnitCost>
+          <UsageDescription>Powers interactive walls and home theaters</UsageDescription>
+        </SupplyItem>
+        <SupplyItem>
+          <ItemID>I1003</ItemID>
+          <ItemName>RGB RAM Stick</ItemName>
+          <SupplierID>S1005</SupplierID>
+          <QuantityAvailable>800</QuantityAvailable>
+          <UnitCost>75.00</UnitCost>
+          <UsageDescription>Decorative lighting and mood enhancement</UsageDescription>
+        </SupplyItem>
+        <SupplyItem>
+          <ItemID>I1004</ItemID>
+          <ItemName>Monitor</ItemName>
+          <SupplierID>S1007</SupplierID>
+          <QuantityAvailable>200</QuantityAvailable>
+          <UnitCost>250.00</UnitCost>
+          <UsageDescription>Smart windows and interactive displays</UsageDescription>
+        </SupplyItem>
+        <SupplyItem>
+          <ItemID>I1005</ItemID>
+          <ItemName>ATX Power Supply</ItemName>
+          <SupplierID>S1008</SupplierID>
+          <QuantityAvailable>150</QuantityAvailable>
+          <UnitCost>100.00</UnitCost>
+          <UsageDescription>Converted into home energy solutions</UsageDescription>
+        </SupplyItem>
+        <SupplyItem>
+          <ItemID>I1006</ItemID>
+          <ItemName>Water-Cooling Tubing</ItemName>
+          <SupplierID>S1009</SupplierID>
+          <QuantityAvailable>400</QuantityAvailable>
+          <UnitCost>15.00</UnitCost>
+          <UsageDescription>Water supply and decorative elements</UsageDescription>
+        </SupplyItem>
+      </SupplyItems>
+</root>

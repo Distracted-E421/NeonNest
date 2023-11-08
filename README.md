@@ -1,2 +1,0 @@
-# Ethansmysite
- Lab for SAD
