@@ -2,7 +2,6 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 from Crypto.Random import get_random_bytes
 import mysql.connector
-import mariadb
 
 # AES encryption and decryption functions
 def encrypt_data(data, key):
