@@ -3,10 +3,6 @@ from mysql.connector import errorcode
 from .db_config import DB_CONFIG
 
 def create_connection():
-    # Create a connection to the database using the provided configuration
-    connection = mysql.connector.connect(**DB_CONFIG)
-    return connection
-
     try:
         # Attempt to establish a connection to the database
         connection = mysql.connector.connect(**DB_CONFIG)
