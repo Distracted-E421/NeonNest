@@ -1,52 +1,33 @@
-from ..database.db_operations import connect_to_database, close_database_connection
+from database.db_operations import *
 
-def perform_database_operation(operation, *args):
-    # Perform necessary validations
-    # Connect to the database
-    db = connect_to_database()
+def manage_inventory():
+    print("1. Add Inventory Item")
+    print("2. Update Inventory Item")
+    print("3. Delete Inventory Item")
+    print("4. View Inventory List")
+    choice = input("Enter your choice: ")
 
-    # Perform the specified operation with the given arguments
-    if operation == "add_inventory_item":
-        add_inventory_item(*args)
-    elif operation == "update_inventory":
-        update_inventory(*args)
-    elif operation == "delete_inventory_item":
-        delete_inventory_item(*args)
-    elif operation == "view_inventory_list":
-        view_inventory_list(*args)
+    if choice == "1":
+        item_name = input("Enter item name: ")
+        quantity = int(input("Enter quantity: "))
+        add_inventory_item(item_name, quantity)
+        print("Item added to inventory")
 
-    # Close the database connection
-    close_database_connection(db)
+    elif choice == "2":
+        item_id = int(input("Enter item ID to update: "))
+        new_quantity = int(input("Enter new quantity: "))
+        update_inventory(item_id, new_quantity)
+        print("Inventory updated")
 
-def add_inventory_item(item):
-    # Insert the item into the inventory table
-    # ...
-    # Add your logic here to insert the item into the inventory table
-    # For example:
-    db.execute("INSERT INTO inventory (item_name, quantity) VALUES (?, ?)", (item['name'], item['quantity']))
-    db.commit()
+    elif choice == "3":
+        item_id = int(input("Enter item ID to delete: "))
+        delete_inventory_item(item_id)
+        print("Item deleted from inventory")
 
-def delete_inventory_item(item_id):
-    # Delete the item from the inventory table
-    # ...
-    # Add your logic here to delete the item from the inventory table
-    # For example:
-    db.execute("DELETE FROM inventory WHERE item_id = ?", (item_id,))
-    db.commit()
+    elif choice == "4":
+        inventory = get_inventory()
+        for item in inventory:
+            print(f"Item ID: {item['id']}, Name: {item['name']}, Quantity: {item['quantity']}")
 
-def view_inventory_list():
-    # Retrieve the inventory list from the database
-    # ...
-    # Add your logic here to retrieve the inventory list from the database
-    # For example:
-    db.execute("SELECT * FROM inventory")
-    inventory_list = db.fetchall()
-    return inventory_list
-
-def update_inventory(item_id, new_quantity):
-    # Update the quantity of the item in the inventory table
-    # ...
-    # Add your logic here to update the quantity of the item in the inventory table
-    # For example:
-    db.execute("UPDATE inventory SET quantity = ? WHERE item_id = ?", (new_quantity, item_id))
-    db.commit()
+    else:
+        print("Invalid choice")
