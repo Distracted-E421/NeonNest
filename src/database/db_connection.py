@@ -15,10 +15,9 @@ def create_connection():
         connection = mysql.connector.connect(**DB_CONFIG)
         return connection
     except mysql.connector.Error as err:
-        if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-            print("Invalid credentials")
-        elif err.errno == errorcode.ER_BAD_DB_ERROR:
-            print("Database not found")
-        else:
-            print(err)
+        error_messages = {
+            errorcode.ER_ACCESS_DENIED_ERROR: "Invalid credentials",
+            errorcode.ER_BAD_DB_ERROR: "Database not found"
+        }
+        print(error_messages.get(err.errno, err))
         return None
