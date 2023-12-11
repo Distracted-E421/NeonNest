@@ -1,0 +1,7 @@
+-- List all tables
+SHOW TABLES;
+
+-- Show individual table information
+SELECT TABLE_NAME, COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_SCHEMA = 'your_database_name';
