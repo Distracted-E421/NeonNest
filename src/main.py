@@ -14,6 +14,8 @@ def main_menu():
     print("1. Manage Customers")
     print("2. Manage Inventory")
     print("3. Process Orders")
+    print("4. View Products")
+    print("5. View Sales Records")
     print("0. Exit")
 
     choice = input("Enter your choice: ")
@@ -24,14 +26,19 @@ def main_menu():
         inventory_control.manage_inventory()
     elif choice == "3":
         order_processing.process_orders()
+    elif products = get_all_products()
+        for product in products:
+            print(product)
+    elif choice == "5":
+        sales_records = get_all_sales()
+        for record in sales_records:
+            print(record)
     elif choice == "0":
         print("Exiting NeonNest. Goodbye!")
         db_connection.close_connection()
         return
     else:
         print("Invalid choice. Please try again.")
-
-    main_menu()
 
 if __name__ == "__main__":
     try:
