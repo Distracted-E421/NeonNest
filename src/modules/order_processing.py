@@ -1,25 +1,43 @@
-from ..database.db_operations import *
-from ..utils.input_validation import *
+from database.db_operations import *
+from utils.input_validation import *
 
-def create_order(order_details):
-    if validate_order_details(order_details):
-        # TODO: Implement the code to create the order in the database
-        pass
+def process_order():
+    order_id = int(input("Enter order ID: "))
+    if not validate_integer_input(order_id):
+        print("Invalid order ID")
+        return
+
+    print("1. Update Order Status")
+    print("2. Cancel Order")
+    print("3. Retrieve Order Details")
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        new_status = input("Enter new status: ")
+        update_order_status(order_id, new_status)
+        print("Order status updated")
+
+    elif choice == "2":
+        cancel_order(order_id)
+        print("Order canceled")
+
+    elif choice == "3":
+        order_details = get_order_details(order_id)
+        print(order_details)
+
     else:
-        # TODO: Handle invalid order details
-        pass
+        print("Invalid choice")
 
-def update_order_status(order_id, new_status):
-    if validate_order_id(order_id) and validate_order_status(new_status):
-        # code to update order status in the database
-        pass
+def process_new_order():
+    # Get order details
+    order_details = input("Enter order details: ")
 
-def cancel_order(order_id):
-    if validate_order_id(order_id):
-        # code to cancel order in the database
-        pass
+    encryption_key = generate_key()
+    encrypted_order_details = encrypt_data(encryption_key, order_details)
 
-def retrieve_order_details(order_id):
-    if validate_order_id(order_id):
-        # code to retrieve order details from the database
-        pass
+    order_data = {
+        "details": encrypted_order_details,
+        "encryption_key": encryption_key  # Store this key securely with the order record
+    }
+    create_order(order_data)
+    print("Order processed successfully")
