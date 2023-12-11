@@ -7,11 +7,11 @@ def generate_key():
 # Encrypt data using AES encryption
 def encrypt_data(key, data):
     cipher_suite = Fernet(key)
-    encrypted_data = cipher_suite.encrypt(data)
+    encrypted_data = cipher_suite.encrypt(data.encode())
     return encrypted_data
 
 # Decrypt data using AES decryption
 def decrypt_data(key, encrypted_data):
     cipher_suite = Fernet(key)
-    decrypted_data = cipher_suite.decrypt(encrypted_data)
+    decrypted_data = cipher_suite.decrypt(encrypted_data).decode()
     return decrypted_data
