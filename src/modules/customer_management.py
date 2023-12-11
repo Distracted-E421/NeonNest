@@ -14,13 +14,37 @@ def add_new_customer():
     print("Customer added successfully")
 
 def update_customer_info():
-    # TODO: Implement update_customer_info function
-    pass
+    customer_email = input("Enter customer email: ")
+    customer_phone = input("Enter customer phone number: ")
+
+    validate_input(None, None, customer_email, customer_phone)
+
+    customer_data = create_customer_data(None, None, customer_email, customer_phone)
+    update_customer(customer_data)
+    print("Customer information updated successfully")
 
 def search_customer_by_name():
-    # TODO: Implement search_customer_by_name function
-    pass
+    customer_name = input("Enter customer name: ")
+    customers = get_all_customers()
+
+    found_customers = []
+    for customer in customers:
+        if customer['first_name'].lower() == customer_name.lower() or customer['last_name'].lower() == customer_name.lower():
+            found_customers.append(customer)
+
+    if len(found_customers) > 0:
+        print("Found customers:")
+        for customer in found_customers:
+            print(f"Name: {customer['first_name']} {customer['last_name']}, Email: {customer['email']}, Phone: {customer['phone']}")
+    else:
+        print("No customers found with the given name.")
 
 def list_all_customers():
-    # TODO: Implement list_all_customers function
-    pass
+    customers = get_all_customers()
+
+    if len(customers) > 0:
+        print("All customers:")
+        for customer in customers:
+            print(f"Name: {customer['first_name']} {customer['last_name']}, Email: {customer['email']}, Phone: {customer['phone']}")
+    else:
+        print("No customers found.")
