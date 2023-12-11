@@ -1,25 +1,25 @@
-LOAD DATA INFILE '/home/mal/neon-nest/products.csv'
+LOAD DATA INFILE '/home/mal/NeonNest/data/products.csv'
 INTO TABLE products
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA INFILE '/home/mal/neon-nest/customers.csv'
+LOAD DATA INFILE '/home/mal/NeonNest/data/customers.csv'
 INTO TABLE customers
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA INFILE '/home/mal/neon-nest/sales.csv'
+LOAD DATA INFILE '/home/mal/NeonNest/data/sales.csv'
 INTO TABLE sales
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
-LOAD DATA LOCAL INFILE '/home/mal/neon-nest/Supplier.csv'
+LOAD DATA LOCAL INFILE '/home/mal/NeonNest/data/csv/Supplier.csv'
 INTO TABLE Supplier
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
