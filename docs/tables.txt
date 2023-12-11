@@ -1,0 +1,52 @@
+MariaDB [neon_nest_apt]> SELECT TABLE_NAME, COLUMN_NAME, DATA_TYOE, CHARACTER_MAXIMUM_LENGTH
+    -> FROM INFORMATION_SCHEMA.COLUMNS
+    -> WHERE TABLE_SCHEMA = 'neon_nest_apt'
+    -> ;
+ERROR 1054 (42S22): Unknown column 'DATA_TYOE' in 'field list'
+MariaDB [neon_nest_apt]> SELECT TABLE_NAME, COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'neon_nest_apt';
++-----------------+--------------------+-----------+--------------------------+
+| TABLE_NAME      | COLUMN_NAME        | DATA_TYPE | CHARACTER_MAXIMUM_LENGTH |
++-----------------+--------------------+-----------+--------------------------+
+| Order           | OrderID            | int       |                     NULL |
+| Order           | CustomerID         | int       |                     NULL |
+| Order           | UnitID             | int       |                     NULL |
+| Order           | OrderDate          | date      |                     NULL |
+| Order           | MoveInDate         | date      |                     NULL |
+| Order           | LeaseTerm          | int       |                     NULL |
+| customers       | id                 | int       |                     NULL |
+| customers       | name               | varchar   |                      255 |
+| customers       | email              | varchar   |                      255 |
+| Supplier        | SupplierID         | int       |                     NULL |
+| Supplier        | SupplierName       | varchar   |                      100 |
+| Supplier        | ContactInfo        | varchar   |                      255 |
+| Supplier        | Reliability        | decimal   |                     NULL |
+| Supplier        | LeadTime           | int       |                     NULL |
+| Supplier        | DefaultOrderSize   | int       |                     NULL |
+| sales           | id                 | int       |                     NULL |
+| sales           | customer_id        | int       |                     NULL |
+| sales           | product_id         | int       |                     NULL |
+| sales           | quantity           | int       |                     NULL |
+| SupplyItem      | ItemID             | int       |                     NULL |
+| SupplyItem      | ItemName           | varchar   |                      100 |
+| SupplyItem      | SupplierID         | int       |                     NULL |
+| SupplyItem      | QuantityAvailable  | int       |                     NULL |
+| SupplyItem      | UnitCost           | decimal   |                     NULL |
+| SupplyItem      | UsageDescription   | varchar   |                      255 |
+| CustomerProfile | CustomerID         | int       |                     NULL |
+| CustomerProfile | FullName           | varchar   |                      100 |
+| CustomerProfile | Email              | varchar   |                      100 |
+| CustomerProfile | PhoneNumber        | varchar   |                       20 |
+| CustomerProfile | RegistrationDate   | date      |                     NULL |
+| CustomerProfile | Address            | varchar   |                      255 |
+| CustomerProfile | PreferredFeatures  | varchar   |                      255 |
+| CustomerProfile | MembershipType     | enum      |                        7 |
+| ApartmentUnit   | UnitID             | int       |                     NULL |
+| ApartmentUnit   | UnitType           | varchar   |                       50 |
+| ApartmentUnit   | FloorNumber        | int       |                     NULL |
+| ApartmentUnit   | UnitFeatures       | varchar   |                      255 |
+| ApartmentUnit   | MonthlyRent        | decimal   |                     NULL |
+| ApartmentUnit   | AvailabilityStatus | tinyint   |                     NULL |
+| products        | id                 | int       |                     NULL |
+| products        | name               | varchar   |                      255 |
+| products        | price              | decimal   |                     NULL |
++-----------------+--------------------+-----------+--------------------------+
