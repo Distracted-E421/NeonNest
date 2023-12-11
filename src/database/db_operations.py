@@ -1,5 +1,3 @@
-# db_operations.py
-
 from .db_connection import create_connection
 
 def get_all_customers():
