@@ -52,3 +52,23 @@ def delete_customer(customer_id):
     conn.commit()
     cursor.close()
     conn.close()
+
+def get_all_products():
+    conn = create_connection()
+    cursor = conn.cursor()
+    query = "SELECT * FROM products"
+    cursor.execute(query)
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return results
+
+def get_all_sales():
+    conn = create_connection()
+    cursor = conn.cursor()
+    query = "SELECT * FROM sales"
+    cursor.execute(query)
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return results
