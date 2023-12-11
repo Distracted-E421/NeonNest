@@ -1,4 +1,4 @@
-from .db_connection import create_connection
+from .db_connection import *
 
 def get_all_customers():
     # Retrieves all customers from the database.
